@@ -89,15 +89,18 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<div className="bgImg"></div>
-			<div className="bg-text">
+			<div className="generate-block">
 				<h1>Password Generator</h1>
-				<h3>{password}</h3>
-				<button className="copy__btn" onClick={handleCopy}>
-					<i class="fas fa-clipboard"></i>{" "}
-				</button>
-				<div className="">
-					<label>Password Length</label>
+				<div className="generate-password">
+					<h3>{password}</h3>
+					<button className="copy-btn" onClick={handleCopy}>
+						<i class="fas fa-clipboard"></i>{" "}
+					</button>
+				</div>
+				<div className="generate-length">
+					<label className="generate-length-lable">
+						Password Length
+					</label>
 					<input
 						type="number"
 						min="8"
@@ -106,32 +109,40 @@ const App = () => {
 						onChange={countChange}
 					/>
 				</div>
-				<div className="">
-					<label>Include Upper Case Letters</label>
+				<div className="generte-Upper">
+					<label className="generate-Upper-lable">
+						Include Upper Case Letters
+					</label>
 					<input
 						type="checkbox"
 						checked={includeUpper}
 						onChange={(e) => setIncludeUpper(e.target.checked)}
 					/>
 				</div>
-				<div className="">
-					<label>Include Lower Case Letters</label>
+				<div className="generte-Lower">
+					<label className="generate-Lower-lable">
+						Include Lower Case Letters
+					</label>
 					<input
 						type="checkbox"
 						checked={includeLower}
 						onChange={(e) => setIncludeLower(e.target.checked)}
 					/>
 				</div>
-				<div className="">
-					<label>Include Numbers</label>
+				<div className="generte-Number">
+					<label className="generate-Number-lable">
+						Include Numbers
+					</label>
 					<input
 						type="checkbox"
 						checked={includeNumbers}
 						onChange={(e) => setIncludeNumbers(e.target.checked)}
 					/>
 				</div>
-				<div className="">
-					<label>Include Special Characters</label>
+				<div className="generte-Symbol">
+					<label className="generate-Symbol-lable">
+						Include Special Characters
+					</label>
 					<input
 						type="checkbox"
 						checked={includeSpecial}
@@ -141,18 +152,18 @@ const App = () => {
 				<button onClick={handleGeneratePassword}>
 					Generate Password
 				</button>
-				<ToastContainer
-					position="bottom-center"
-					autoClose={5000}
-					hideProgressBar={false}
-					newestOnTop={false}
-					closeOnClick
-					rtl={false}
-					pauseOnFocusLoss
-					draggable
-					pauseOnHover
-				/>
 			</div>
+			<ToastContainer
+				position="bottom-center"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
 		</div>
 	);
 };

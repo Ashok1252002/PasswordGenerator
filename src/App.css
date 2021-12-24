@@ -1,27 +1,91 @@
-body,
-html {
-	height: 100%;
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-	background-color: rgb(0, 0, 0);
-	/* background-color: rgba(0, 0, 0, 0.4); */
+.generate-block {
 	color: white;
 	font-weight: bold;
-	border: 3px solid #f1f1f1;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
-	width: 80%;
+	min-width: 30%;
+	min-height: 33%;
 	padding: 20px;
-	text-align: center;
+	background: linear-gradient(-45deg, #aea0ee, #13044d);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.generate-password {
+	position: relative;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 13px 10px;
+	color: #fff;
+	height: 46px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.copy-btn {
+	position: absolute;
+	background: #3b3b98;
+	color: #fff;
+	border: none;
+	height: 40px;
+	padding: 10px;
+	cursor: pointer;
+	top: 3px;
+	right: 3px;
+}
+
+.generate-length,
+.generte-Upper,
+.generte-Lower,
+.generte-Number,
+.generte-Symbol {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: 5px;
+	align-items: center;
+	height: 33px;
+}
+
+.generate-length-lable,
+.generate-Upper-lable,
+.generate-Lower-lable,
+.generate-Number-lable,
+.generate-Symbol-lable {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+input[type="number"] {
+	width: 20%;
+	height: 30%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	border: none;
+	border-radius: 0;
+	background: #fff;
+	cursor: pointer;
 }

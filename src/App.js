@@ -149,7 +149,7 @@ const App = () => {
 						onChange={(e) => setIncludeSpecial(e.target.checked)}
 					/>
 				</div>
-				<button onClick={handleGeneratePassword}>
+				<button className="btn" onClick={handleGeneratePassword}>
 					Generate Password
 				</button>
 			</div>
